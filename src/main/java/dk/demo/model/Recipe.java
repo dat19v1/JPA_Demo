@@ -1,9 +1,6 @@
 package dk.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Recipe {
@@ -19,6 +16,10 @@ public class Recipe {
     private String source;
     private String url;
     private String directions;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Notes notes;
+
 
 }
 
