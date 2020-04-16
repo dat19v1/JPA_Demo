@@ -30,4 +30,17 @@ public class CategoryController {
         return "index";
     }
 
+
+    @GetMapping("/catdesc")
+    public String getCat(){
+        System.out.println(categoryRepository.findByDescription("Mexican").get().getDescription());
+        return "index";
+    }
+
+
+    @GetMapping("/recipe")
+    public String getRecipe(){
+        return
+    }
+
 }
